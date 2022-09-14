@@ -1,7 +1,10 @@
 infos importantes para criação do projeto
 
 https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable
+
 https://docs.expo.dev/guides/using-styled-components/
+
+https://levelup.gitconnected.com/using-styled-components-with-react-native-de645fcf4787
 
 - Utilizando a documentação e a biblioteca styled-components faça um layout 
 criativo em um novo projeto expo! Utilize botões, imagens e outros 

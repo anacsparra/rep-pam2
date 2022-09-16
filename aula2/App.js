@@ -1,6 +1,8 @@
-import React from 'react';
+import * as React from 'react';
+import { Text, View, Image, TextInput, button} from 'react-native';
 import styled from 'styled-components/native';
 import img from '../aula2/assets/img/cpu.jpg';
+
 
 const Container = styled.View`
 flex: 1;
@@ -9,11 +11,24 @@ align-items: center;
 justify-content: center;
 `;
 const Titulo = styled.Text`
-color: #000;
+color: #;
 text-align: center;
 font-size: 16px;
 margin-bottom: 20px;
 `;
+const Img = styled.Image`
+width: 250px;
+height: 160px;
+alignSelft: "center";
+border-radius: 20px;
+`;
+const Button = styled.Button`
+  cursor: pointer;
+  font-size: 16px;
+  padding: 15px 32px;
+  text-align: center;
+  background-color: red;
+`
 const Formulario = styled.TextInput`
   text-align:center;
   height:50;
@@ -24,30 +39,18 @@ const Formulario = styled.TextInput`
   border-radius: 10px;
   color= #fff;
 `;
-const Button = styled.Button`
-height: 40;
-background-Color: "purple";
-borderWidth: 1;
-color: #fff;
-font-size: 1em;
-padding: 0.25em 1em;
-margin: 15;
-`;
-const Img = styled.Image`
-style={{width: 100;
-height: 160;
-alignSelft: "center";
-`;
+export default function App() {
+  return (
+    <Container>
+        <Titulo>Seja bem vindo a seu Site de Programação! </Titulo>
+        <Img source = {{uri: img}}></Img>
+        <br></br>
+        <Titulo>Faça seu login! </Titulo>
+        <Formulario placeholder="Digite seu Email."/>
+        <Formulario placeholder="Digite sua Senha."/>
+        <Button>Fazer Login!</Button>
+      
 
-export default () => (
-<Container>
-  <Titulo>Seja bem vindo a seu Site de Programação! </Titulo>
-  <Img source = {{uri: img}}></Img>
-  <Titulo>Faça seu login! </Titulo>
-  <Formulario placeholder="Digite seu Email."> </Formulario>
-  <Formulario placeholder="Digite sua Senha."> </Formulario>
-  <Button>Fazer Login!</Button>
-</Container>
-);
-
-
+    </Container>
+  );
+}

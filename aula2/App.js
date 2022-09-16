@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, View, Image, TextInput, button} from 'react-native';
+import { Text, View, Image, TextInput, Button} from 'react-native';
 import styled from 'styled-components/native';
 import img from '../aula2/assets/img/cpu.jpg';
 
@@ -22,13 +22,6 @@ height: 160px;
 alignSelft: "center";
 border-radius: 20px;
 `;
-const Button = styled.Button`
-  cursor: pointer;
-  font-size: 16px;
-  padding: 15px 32px;
-  text-align: center;
-  background-color: red;
-`
 const Formulario = styled.TextInput`
   text-align:center;
   height:50;
@@ -39,6 +32,9 @@ const Formulario = styled.TextInput`
   border-radius: 10px;
   color= #fff;
 `;
+function login(){
+  alert("Cadastro realizado com sucesso!");
+}
 export default function App() {
   return (
     <Container>
@@ -48,7 +44,10 @@ export default function App() {
         <Titulo>Faça seu login! </Titulo>
         <Formulario placeholder="Digite seu Email."/>
         <Formulario placeholder="Digite sua Senha."/>
-        <Button>Fazer Login!</Button>
+        <Button
+        title="Fazer login"
+        onClick= {login()}
+      />
       
 
     </Container>
